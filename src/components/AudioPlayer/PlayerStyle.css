@@ -1,0 +1,66 @@
+@reference "../../App.css";
+
+.rhap_controls-section {
+  @apply justify-center;
+}
+
+.rhap_main-controls {
+  @apply mx-6;
+}
+
+.rhap_additional-controls {
+  @apply grow-0;
+}
+
+.rhap_container {
+  @apply bg-transparent static;
+}
+
+.rhap_rewind-button,
+.rhap_forward-button {
+  @apply flex w-[40px] items-center justify-center;
+}
+
+.rhap_progress-section {
+  @apply flex items-center justify-center;
+}
+
+.rhap_progress-container {
+  @apply w-[400px] grow-0;
+}
+
+.rhap_volume-container {
+  @apply absolute right-[24px] w-[100px] top-1/2 transform -translate-y-1/2;
+}
+
+.rhap_progress-bar {
+  @apply h-[2px];
+}
+
+.rhap_progress-indicator {
+  @apply hidden w-[15px] h-[15px] bg-white;
+}
+
+.rhap_progress-container:hover .rhap_progress-indicator {
+  @apply flex;
+}
+
+.rhap_progress-filled {
+  @apply bg-white;
+}
+
+.rhap_volume-bar {
+  @apply h-[2px];
+}
+
+.rhap_volume-indicator {
+  @apply bg-white top-1/2 transform -translate-1/2;
+}
+
+.rhap_volume-button {
+  @apply mr-3;
+}
+
+.rhap_download-progress {
+  @apply bg-white/30;
+}

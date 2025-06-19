@@ -1,0 +1,79 @@
+import H5AudioPlayer, { RHAP_UI } from "react-h5-audio-player";
+import "react-h5-audio-player/lib/styles.css";
+import "./PlayerStyle.css";
+import {
+  Pause,
+  Play,
+  Repeat,
+  Repeat1,
+  Shuffle,
+  SkipBack,
+  SkipForward,
+  Volume2,
+  VolumeX,
+} from "lucide-react";
+
+export default ({
+  title,
+  handle,
+  artwork,
+  selectedAudio,
+}: {
+  title: string;
+  handle: string;
+  artwork: Record<string, string>;
+  selectedAudio: string;
+}) => {
+  return (
+    <article className="flex items-center card p-6 py-1">
+      <div
+        className="flex items-center absolute
+      "
+      >
+        <img
+          src={artwork[Object.keys(artwork)[0]]}
+          className="w-[100px] p-4w-[100px] p-4"
+        />
+        <div>
+          <h2 className="text-sm font-medium">{title}</h2>
+          <p className="text-xs">{handle}</p>
+        </div>
+      </div>
+      <H5AudioPlayer
+        src={selectedAudio}
+        layout={"stacked-reverse"}
+        customControlsSection={[
+          <Shuffle className=" text-gray-400 cursor-pointer" height={20} />,
+          RHAP_UI.MAIN_CONTROLS,
+          RHAP_UI.LOOP,
+        ]}
+        customIcons={{
+          forward: (
+            <SkipForward className="text-white" fill="white" height={15} />
+          ),
+          rewind: <SkipBack fill="white" height={15} className="text-white" />,
+          play: (
+            <div className="bg-white flex items-center justify-center rounded-full w-[35px] h-[35px] ">
+              <Play fill="black" className="text-white" height={20} />
+            </div>
+          ),
+          loop: <Repeat1 height={20} className="text-white" />,
+          loopOff: <Repeat height={20} className="text-gray-400" />,
+          pause: (
+            <div className="bg-white flex items-center justify-center rounded-full w-[35px] h-[35px]">
+              <Pause
+                fill="black"
+                className="text-black font-extralight"
+                strokeWidth={0.5}
+                height={16}
+              />
+            </div>
+          ),
+          volume: <Volume2 className="text-white" height={20} />,
+          volumeMute: <VolumeX className="text-white" height={20} />,
+        }}
+        customProgressBarSection={[RHAP_UI.PROGRESS_BAR, RHAP_UI.VOLUME]}
+      />
+    </article>
+  );
+};
