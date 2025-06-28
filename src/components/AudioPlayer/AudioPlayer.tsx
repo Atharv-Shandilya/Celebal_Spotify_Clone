@@ -12,18 +12,11 @@ import {
   Volume2,
   VolumeX,
 } from "lucide-react";
+import ApplicationStore from "../../store/Application-store";
 
-export default ({
-  title,
-  handle,
-  artwork,
-  selectedAudio,
-}: {
-  title: string;
-  handle: string;
-  artwork: Record<string, string>;
-  selectedAudio: string;
-}) => {
+export default () => {
+  const playing = ApplicationStore((state) => state.playing);
+
   return (
     <article className="flex items-center card p-6 py-1">
       <div
@@ -31,16 +24,16 @@ export default ({
       "
       >
         <img
-          src={artwork[Object.keys(artwork)[0]]}
+          src={playing?.artwork[Object.keys(playing?.artwork)[0]]}
           className="w-[100px] p-4w-[100px] p-4"
         />
         <div>
-          <h2 className="text-sm font-medium">{title}</h2>
-          <p className="text-xs">{handle}</p>
+          <h2 className="text-sm font-medium">{playing?.title}</h2>
+          <p className="text-xs">{playing?.artist}</p>
         </div>
       </div>
       <H5AudioPlayer
-        src={selectedAudio}
+        src={playing?.stream_link}
         layout={"stacked-reverse"}
         customControlsSection={[
           <Shuffle className=" text-gray-400 cursor-pointer" height={20} />,
