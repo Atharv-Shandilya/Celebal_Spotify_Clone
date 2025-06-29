@@ -47,8 +47,8 @@ npm install
 
 1. **Clone the backend repository**
 
-git clone https://github.com/Atharv-Shandilya/Celebal_Spotify_Clone_API.git
-cd Celebal_Spotify_Clone_API
+git clone https://github.com/Atharv-Shandilya/Spotify_Clone_API.git
+cd Spotify_Clone_API
 
 
 2. **Install backend dependencies**
