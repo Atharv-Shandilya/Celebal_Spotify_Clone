@@ -1,54 +1,76 @@
-# React + TypeScript + Vite
+# Celebal Spotify Clone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A **Spotify clone web application** built with React, featuring state management with Zustand and integration with Audius and other music APIs. This project aims to replicate core functionalities of Spotify, such as browsing trending songs, searching by categories, and playing music.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Browse **trending songs** and playlists
+- Search tracks.
+- Play and like tracks and playlists
+- Persistent state management with **Zustand**
+- Integration with **Audius API** for music data
+- Routing with **React Router DOM**
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React** - For building the user interface
+- **Zustand** - For state management
+- **Axios** - For making API requests
+- **React Router DOM** - For navigation and routing
+- **Tailwind CSS** - For styling the application
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Getting Started
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Follow these steps to set up the project locally.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Prerequisites
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- [Node.js](https://nodejs.org/) and npm installed on your system.
+
+### Installation
+
+#### Frontend Setup
+
+1. **Clone the frontend repository**
+
+git clone https://github.com/Atharv-Shandilya/Celebal_Spotify_Clone.git
+cd Celebal_Spotify_Clone
+
+2. **Install frontend dependencies**
+
+npm install
+
+3. **Start the frontend development server**
+
+
+#### Backend Setup
+
+1. **Clone the backend repository**
+
+git clone https://github.com/Atharv-Shandilya/Celebal_Spotify_Clone_API.git
+cd Celebal_Spotify_Clone_API
+
+
+2. **Install backend dependencies**
+
+npm install
+
+
+3. **Start the backend server**
+
+npm start
+
+## Usage
+
+Once both the frontend and backend servers are running, you can:
+- Explore **trending songs** and playlists on the homepage.
+- Search for tracks by **categories**.
+- Play music and manage your liked tracks and playlists.
+
+## Contributing
+
+Feel free to open issues or submit pull requests if you have suggestions or improvements for the project.
+
+## License
+
+This project is licensed under the **MIT License**. See the LICENSE file for details.
