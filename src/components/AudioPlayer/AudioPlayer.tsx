@@ -2,6 +2,7 @@ import H5AudioPlayer, { RHAP_UI } from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
 import "./PlayerStyle.css";
 import {
+  Heart,
   Pause,
   Play,
   Repeat,
@@ -16,6 +17,9 @@ import ApplicationStore from "../../store/Application-store";
 
 export default () => {
   const playing = ApplicationStore((state) => state.playing);
+  const liked = ApplicationStore((state) => state.likedTracks);
+  const add = ApplicationStore((state) => state.likeTrack);
+  const remove = ApplicationStore((state) => state.dislikeTrack);
 
   return (
     <article className="flex items-center card p-6 py-1">
@@ -39,6 +43,19 @@ export default () => {
           <Shuffle className=" text-gray-400 cursor-pointer" height={20} />,
           RHAP_UI.MAIN_CONTROLS,
           RHAP_UI.LOOP,
+          <div className="ml-6 cursor-pointer">
+            <Heart
+              fill={liked[playing?.id as string] ? "white" : ""}
+              onClick={() => {
+                if (playing)
+                  if (liked[playing?.id as string]) {
+                    remove(playing.id);
+                  } else {
+                    add(playing);
+                  }
+              }}
+            />
+          </div>,
         ]}
         customIcons={{
           forward: (

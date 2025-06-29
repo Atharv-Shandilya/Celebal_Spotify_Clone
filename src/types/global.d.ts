@@ -47,3 +47,12 @@ export type Genre =
   | "Glitch Hop"
   | "Ambient"
   | "Experimental";
+
+export interface SongI {
+  id: string;
+  title: string;
+  artist: string;
+  mood: string;
+  tag: string[] | null;
+  artwork: Record<string, string>;
+}
