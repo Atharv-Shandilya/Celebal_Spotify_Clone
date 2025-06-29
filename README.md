@@ -10,6 +10,15 @@ A **Spotify clone web application** built with React, featuring state management
 - Persistent state management with **Zustand**
 - Integration with **Audius API** for music data
 - Routing with **React Router DOM**
+  
+![WhatsApp Image 2025-06-29 at 7 16 53 PM(1)](https://github.com/user-attachments/assets/ac8b606c-940c-4fd8-b27b-6ae06798da94)
+![WhatsApp Image 2025-06-29 at 7 16 52 PM](https://github.com/user-attachments/assets/69b8d404-e514-41fb-912b-98e63976dada)
+![WhatsApp Image 2025-06-29 at 7 16 53 PM](https://github.com/user-attachments/assets/26b92563-ad17-41d9-8b54-56bb1f429ffd)
+![WhatsApp Image 2025-06-29 at 7 16 54 PM](https://github.com/user-attachments/assets/f177a4a4-f11a-4b3c-ae62-e72dc2ac43cf)
+![WhatsApp Image 2025-06-29 at 7 16 53 PM(2)](https://github.com/user-attachments/assets/949861df-1e4a-42f8-8924-0bcacc666a5f)
+![WhatsApp Image 2025-06-29 at 7 16 54 PM(1)](https://github.com/user-attachments/assets/e38e6511-a5a9-4cb9-9ca2-22fa3276ddf0)
+
+
 
 ## Technologies Used
 
